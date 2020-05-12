@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Express</title>
+    </head>
+
+    <body>
+    <h1>This is the {{name}} page! </h1>
+    <h3>Today is {{date}} </h3>
+    </body>
+</html>

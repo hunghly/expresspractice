@@ -42,7 +42,19 @@
 
 
 const express = require('express');
+const routes = require('./routes/index')
+const path = require('path')
+
 const app = express();
+app.use('/', routes);
+console.log(__dirname);
+app.set('views', path.join(__dirname, 'views'))
+app.set('view engine', 'hjs')
+app.listen(5000);
+console.log('Server running on port 5000');
+
+
+/*const app = express();
 
 
 app.get('/', (req, res, next) => {
@@ -75,9 +87,6 @@ app.get('/params/:name/:location/:occupation', function(req, res, next) {
     res.json({
         'params': params
     });
-})
+})*/
 
-
-app.listen(5000);
-console.log('Server running on port 5000');
 
