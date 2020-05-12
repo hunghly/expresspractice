@@ -63,6 +63,19 @@ app.get('/html', function(req, res, next) {
         </html>`;
     res.send(html);
 })
+// get query
+app.get('/query', function(req, res, next) {
+    const query = req.query;
+    console.log(query);
+    res.json(query);
+})
+// get params passed in
+app.get('/params/:name/:location/:occupation', function(req, res, next) {
+    const params = req.params;
+    res.json({
+        'params': params
+    });
+})
 
 
 app.listen(5000);
